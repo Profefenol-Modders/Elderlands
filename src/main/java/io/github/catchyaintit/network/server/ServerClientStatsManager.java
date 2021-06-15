@@ -21,6 +21,17 @@ public class ServerClientStatsManager {
         return stats.get(id);
     }
 
+    public boolean hasStat(UUID id) {
+        if (stats.containsKey(id)) {
+            return true;
+        }
+        return false;
+    }
+
+    public void createEmptyStat(UUID id) {
+        stats.put(id, new Stats(0,0));
+    }
+
     //public Stats loadStat() {
 
     //}
@@ -33,4 +44,6 @@ public class ServerClientStatsManager {
     public static ServerClientStatsManager createEmpty() {
         return new ServerClientStatsManager(new HashMap<UUID, Stats>());
     }
+
+
 }

@@ -1,5 +1,9 @@
 package io.github.catchyaintit.network;
 
+import it.unimi.dsi.fastutil.ints.IntArrayList;
+import it.unimi.dsi.fastutil.ints.IntList;
+import it.unimi.dsi.fastutil.ints.IntLists;
+
 public class Stats {
     private int corruption;
     private int gold;
@@ -23,5 +27,10 @@ public class Stats {
 
     public int getGold() {
         return gold;
+    }
+
+    public int[] getStatArray() {
+        int[] list = {corruption, gold};
+        return list;
     }
 }

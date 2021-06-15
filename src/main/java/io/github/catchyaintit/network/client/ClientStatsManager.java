@@ -1,4 +1,9 @@
 package io.github.catchyaintit.network.client;
 
-public class ClientStatsManager {
+import io.github.catchyaintit.network.Stats;
+
+public class ClientStatsManager extends Stats {
+    public ClientStatsManager(int corruption, int gold) {
+        super(corruption, gold);
+    }
 }

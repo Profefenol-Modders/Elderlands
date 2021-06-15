@@ -9,5 +9,6 @@ public class NetworkingConstants {
     public static Identifier CORRUPTION_PACKET = new Identifier("corruption_packet");
     //public static Identifier CORRUPTION_SUBTRACT_PACKET = new Identifier("corruption_subtract_packet");
 
+    public static Identifier LOGIN_PACKET = new Identifier("login_packet");
 
 }
