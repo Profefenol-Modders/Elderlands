@@ -3,8 +3,8 @@ package io.github.catchyaintit;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import io.catchyaintit.block.ModBlocks;
-import io.catchyaintit.item.ModItems;
+import io.github.catchyaintit.block.ModBlocks;
+import io.github.catchyaintit.item.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
