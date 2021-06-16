@@ -1,5 +1,7 @@
 package io.github.catchyaintit;
 
+import io.github.catchyaintit.block.Blocks;
+import io.github.catchyaintit.item.Items;
 import io.github.catchyaintit.network.packet.NetworkingConstants;
 import io.github.catchyaintit.network.server.ServerClientStatsManager;
 import io.github.catchyaintit.ui.keybinds.StatScreenKeybind;
@@ -30,5 +32,9 @@ public class ElderLand implements ModInitializer {
 
 			ServerPlayNetworking.send(handler.getPlayer(), NetworkingConstants.LOGIN_PACKET, buf);
 		});
+
+		// this is dumb but to not clutter this method all blocks are registered here
+		Blocks.register();
+		Items.register();
 	}
 }
