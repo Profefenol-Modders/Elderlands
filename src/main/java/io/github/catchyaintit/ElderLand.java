@@ -12,6 +12,7 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.listener.ServerPlayPacketListener;
 
 public class ElderLand implements ModInitializer {
+	public static String MODID = "elderland";
 	public static ServerClientStatsManager serverClientStatsManager = ServerClientStatsManager.createEmpty();
 	@Override
 	public void onInitialize() {
@@ -28,7 +29,6 @@ public class ElderLand implements ModInitializer {
 			}
 
 			ServerPlayNetworking.send(handler.getPlayer(), NetworkingConstants.LOGIN_PACKET, buf);
-			System.out.println("sent packet");
 		});
 	}
 }

@@ -12,6 +12,8 @@ import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.LiteralText;
+import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Formatting;
 import org.lwjgl.glfw.GLFW;
 
 public class ElderLandClientEntry implements ClientModInitializer {
@@ -44,14 +46,13 @@ public class ElderLandClientEntry implements ClientModInitializer {
             clientStatsManager.setCorruption(corruption);
             clientStatsManager.setGold(gold);
             client.execute(() -> {
-                client.player.sendMessage(new LiteralText("[Login Completed]"), false);
-                client.openScreen(new StatsScreen(new LiteralText("Test")));
+                client.player.sendMessage(new TranslatableText("text.elderland.login").formatted(Formatting.GREEN), false);
             });
         });
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (statScreenKeybind.wasPressed()) {
-                client.openScreen(new StatsScreen(new LiteralText("Test")));
+                client.openScreen(new StatsScreen(new TranslatableText("gui.elderland.stat_screen_title")));
             }
         });
     }
