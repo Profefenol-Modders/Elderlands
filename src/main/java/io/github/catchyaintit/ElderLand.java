@@ -1,5 +1,7 @@
 package io.github.catchyaintit;
 
+import io.github.catchyaintit.block.Blocks;
+import io.github.catchyaintit.item.Items;
 import io.github.catchyaintit.network.packet.NetworkingConstants;
 import io.github.catchyaintit.network.server.ServerClientStatsManager;
 import io.github.catchyaintit.ui.keybinds.StatScreenKeybind;
@@ -12,6 +14,7 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.listener.ServerPlayPacketListener;
 
 public class ElderLand implements ModInitializer {
+	public static String MODID = "elderland";
 	public static ServerClientStatsManager serverClientStatsManager = ServerClientStatsManager.createEmpty();
 	@Override
 	public void onInitialize() {
@@ -28,7 +31,10 @@ public class ElderLand implements ModInitializer {
 			}
 
 			ServerPlayNetworking.send(handler.getPlayer(), NetworkingConstants.LOGIN_PACKET, buf);
-			System.out.println("sent packet");
 		});
+
+		// this is dumb but to not clutter this method all blocks are registered here
+		Blocks.register();
+		Items.register();
 	}
 }
