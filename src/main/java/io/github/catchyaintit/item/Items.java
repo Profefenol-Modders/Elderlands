@@ -11,9 +11,10 @@ import net.minecraft.util.registry.Registry;
 
 public class Items {
     public static BlockItem UNSTABLE_ELDERIUM = new BlockItem(Blocks.UNSTABLE_ELDERIUM, new FabricItemSettings().fireproof().rarity(Rarity.EPIC));
-
+    public static BlockItem STABLE_ELDERIUM = new BlockItem(Blocks.STABLE_ELDERIUM, new FabricItemSettings().fireproof().rarity(Rarity.EPIC));
 
     public static void register() {
         Registry.register(Registry.ITEM, new Identifier(ElderLand.MODID, "unstable_elderium_item"), UNSTABLE_ELDERIUM);
+        Registry.register(Registry.ITEM, new Identifier(ElderLand.MODID, "stable_elderium_item"), STABLE_ELDERIUM);
     }
 }
