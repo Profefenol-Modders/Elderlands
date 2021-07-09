@@ -1,5 +1,6 @@
 {
-  "block.elderland.unstable_elderium": "Unstable Elderium",
+  "block.elderland.unstable_elderium": "Unstable Elderium Ore",
+  "block.elderland.stable_elderium": "Elderium Ore",
 
   "text.elderland.login": "[Login Complete]",
 
