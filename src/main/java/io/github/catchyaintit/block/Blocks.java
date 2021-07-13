@@ -8,10 +8,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class Blocks {
-    public static Block UNSTABLE_ELDERIUM = new Block(FabricBlockSettings.of(Material.METAL));
+    public static Block UNSTABLE_ELDERIUM = new UnstableElderium(FabricBlockSettings.of(Material.METAL).hardness(8.0f));
 
     public static void register() {
-        Registry.register(Registry.BLOCK, new Identifier(ElderLand.MODID, "unstable_elderium_item.json"), UNSTABLE_ELDERIUM);
+        Registry.register(Registry.BLOCK, new Identifier(ElderLand.MODID, "unstable_elderium"), UNSTABLE_ELDERIUM);
 
     }
 }

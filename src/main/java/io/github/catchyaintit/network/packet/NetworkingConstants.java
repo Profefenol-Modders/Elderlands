@@ -11,4 +11,6 @@ public class NetworkingConstants {
 
     public static Identifier LOGIN_PACKET = new Identifier("login_packet");
 
+    public static Identifier STAT_ARRAY_PACKET = new Identifier("stat_array_packet");
+
 }
