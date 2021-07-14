@@ -2,6 +2,7 @@ package io.github.catchyaintit.ui.gui;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import io.github.catchyaintit.ElderLand;
+import io.github.catchyaintit.ElderLandClientEntry;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.texture.TextureManager;
@@ -23,7 +24,7 @@ public class StatsScreen extends Screen {
     @Override
     protected void init() {
         super.init();
-        exitButton = new ButtonWidget(width / 2 + (128 - 35 ), height / + (128 - 20),35,20, new TranslatableText("gui.elderland.exit_button"), press -> {
+        exitButton = new ButtonWidget(width / 2 + (128 - 70), height / + (128 - 40),35,20, new TranslatableText("gui.elderland.exit_button"), press -> {
             onClose();
         });
         this.addSelectableChild(exitButton);
@@ -35,7 +36,7 @@ public class StatsScreen extends Screen {
     public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
         this.renderBackground(matrices);
         super.render(matrices, mouseX, mouseY, delta);
-        client.textRenderer.draw(matrices, new LiteralText("test"), 10, 10, Color.RED.getRGB());
+        client.textRenderer.draw(matrices, new LiteralText(String.valueOf(ElderLandClientEntry.clientStatsManager.getCorruption())), 10, 10, Color.RED.getRGB());
 
     }
 

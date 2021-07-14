@@ -7,6 +7,7 @@ import io.github.catchyaintit.network.server.ServerClientStatsManager;
 import io.github.catchyaintit.ui.keybinds.StatScreenKeybind;
 import it.unimi.dsi.fastutil.ints.IntLists;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
@@ -22,6 +23,7 @@ public class ElderLand implements ModInitializer {
 			if (serverClientStatsManager.hasStat(handler.getPlayer().getUuid()) == false) {
 				serverClientStatsManager.createEmptyStat(handler.getPlayer().getUuid());
 			}
+
 			PacketByteBuf buf = PacketByteBufs.create();
 
 			try {

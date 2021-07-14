@@ -50,6 +50,20 @@ public class ElderLandClientEntry implements ClientModInitializer {
             });
         });
 
+        ClientPlayNetworking.registerGlobalReceiver(NetworkingConstants.STAT_ARRAY_PACKET, (client, handler, buf, responseSender) -> {
+            int[] data = buf.readIntArray();
+            int corruption = data[0];
+            int gold = data[1];
+            int corruptionSmall = data[2];
+            clientStatsManager.setCorruption(corruption);
+            clientStatsManager.setGold(gold);
+
+            client.execute(() -> {
+                client.player.sendMessage(new LiteralText("Your stats have changed"), false);
+            });
+
+        });
+
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (statScreenKeybind.wasPressed()) {
                 client.openScreen(new StatsScreen(new TranslatableText("gui.elderland.stat_screen_title")));
