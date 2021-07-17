@@ -1,0 +1,15 @@
+{
+  "name" : "test_armor",
+  "durability" : {
+    "HEAD": 0,
+    "CHEST": 0,
+    "LEGS": 0,
+    "FEET": 0
+  },
+  "protection" : {
+    "HEAD": 0,
+    "CHEST": 0,
+    "LEGS": 0,
+    "FEET": 0
+  }
+}
