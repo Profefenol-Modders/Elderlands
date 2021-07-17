@@ -1,11 +1,8 @@
 package io.github.profefenol.elderland.runtime.armor;
 
 import com.mojang.serialization.Codec;
-import com.mojang.serialization.Keyable;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.text.TranslatableText;
 
-import java.util.List;
 import java.util.Map;
 
 public class RuntimeArmorConfig {
