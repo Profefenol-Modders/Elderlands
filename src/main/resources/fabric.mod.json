@@ -19,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.catchyaintit.ElderLand"
+      "io.github.profefenol.elderland.ElderLand"
     ],
     "client": [
-      "io.github.catchyaintit.ElderLandClientEntry"
+      "io.github.profefenol.elderland.ElderLandClient"
     ]
   },
   "mixins": [
