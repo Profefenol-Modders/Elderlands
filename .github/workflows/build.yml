@@ -12,14 +12,19 @@ jobs:
       matrix:
         # Use these Java versions
         java: [
-          17    # Minimum supported by Minecraft
+          17    
         ]
-        # and run on both Linux and Windows
-        os: [ubuntu-20.04, windows-latest]
+        os: [ubuntu-20.04]
     runs-on: ${{ matrix.os }}
     steps:
       - name: checkout repository
         uses: actions/checkout@v2
+        
+      - name: Tidy cache
+        # You may pin to the exact commit or the version.
+        # uses: skjolber/tidy-cache-github-action@6432f974246b922d8ef551512f89be02d9ac1e6b
+        uses: skjolber/tidy-cache-github-action@v1
+        
       - name: cache
         uses: actions/cache@v2
         with:
@@ -36,13 +41,13 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: ${{ matrix.java }}
+          
       - name: make gradle wrapper executable
-        if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
       - name: build
-        run: ./gradlew build
+        run: ./gradlew build --no-daemon
       - name: capture build artifacts
-        if: ${{ runner.os == 'Linux' && matrix.java == '16' }} # Only upload artifacts built from latest java on one OS
+        if: ${{ runner.os == 'Linux' && matrix.java == '17' }}
         uses: actions/upload-artifact@v2
         with:
           name: Artifacts
