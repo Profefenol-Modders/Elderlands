@@ -10,6 +10,8 @@ Credits:
 
 I ran out of name ideas: Lead developer 
 
+Greysilly7: Secondary developer
+
 QPCrummer: Lead Artist/Code contributer
 
 jneos: Huge code contributer
