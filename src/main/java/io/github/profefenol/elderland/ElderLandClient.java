@@ -37,7 +37,7 @@ public class ElderLandClient implements ClientModInitializer {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (statScreenKeybinding.wasPressed()) {
                 log.info("Opening stats screen");
-                client.openScreen(new StatsScreen());
+                client.setScreen(new StatsScreen());
             }
         });
 
