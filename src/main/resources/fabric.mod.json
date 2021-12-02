@@ -4,9 +4,11 @@
   "version": "0.1",
 
   "name": "Elderlands",
-  "description": "A minecraft adventure mod",
+  "description": "Explore the depths of the deepest",
   "authors": [
-    "I ran out of name ideas#9578"
+    "I ran out of name ideas#9578",
+    "QPCrummer",
+    "Trains"
   ],
   "contact": {
     "homepage": "https://discord.gg/EX5Dbe2c",
@@ -30,9 +32,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.11.3",
+    "fabricloader": ">=0.11.6",
     "fabric": "*",
-    "minecraft": "1.17.x",
+    "minecraft": ">=1.17.1",
     "java": ">=16"
   },
   "suggests": {
