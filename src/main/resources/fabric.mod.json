@@ -6,7 +6,9 @@
   "name": "Elderlands",
   "description": "A minecraft adventure mod",
   "authors": [
-    "I ran out of name ideas#9578"
+    "I ran out of name ideas",
+    "QPCrummer",
+    "Jneos"
   ],
   "contact": {
     "homepage": "https://discord.gg/EX5Dbe2c",
@@ -30,12 +32,10 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.12.6",
+    "fabricloader": "*",
     "fabric": "*",
-    "minecraft": ">=1.18",
-    "java": ">=16"
+    "minecraft": ">=1.18"
   },
   "suggests": {
-    "another-mod": "*"
   }
 }

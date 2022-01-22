@@ -10,18 +10,18 @@ import java.util.List;
 import static java.util.Collections.emptyMap;
 import static java.util.Collections.singletonList;
 
-public class BlobBossEntityModel extends EntityModel<BlobBossEntity> {
+public class GrapesterModel extends EntityModel<GrapesterEntity> {
 
     private final ModelPart base;
 
-    public BlobBossEntityModel() {
+    public GrapesterModel() {
         //TODO Replace static model, with generated blockbench models
         final List<ModelPart.Cuboid> cuboids = singletonList(new ModelPart.Cuboid(0, 0, 0, 0, 0, 250, 250, 250, 0, 0, 0, false, 50, 50));
         base = new ModelPart(cuboids, emptyMap());
     }
 
     @Override
-    public void setAngles(BlobBossEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
+    public void setAngles(GrapesterEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
     }
 
     @Override

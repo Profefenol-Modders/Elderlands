@@ -1,28 +1,14 @@
-# Automatically build the project and run any configured tests for every push
-# and submitted pull request. This can help catch issues that only occur on
-# certain platforms or Java versions, and provides a first line of defence
-# against bad commits.
-
 name: build
 on: [pull_request, push]
 
 jobs:
   build:
-    strategy:
-      matrix:
-        # Use these Java versions
-        java: [
-          17    
-        ]
-        os: [ubuntu-20.04]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - name: checkout repository
         uses: actions/checkout@v2
         
       - name: Tidy cache
-        # You may pin to the exact commit or the version.
-        # uses: skjolber/tidy-cache-github-action@6432f974246b922d8ef551512f89be02d9ac1e6b
         uses: skjolber/tidy-cache-github-action@v1
         
       - name: cache
@@ -37,17 +23,17 @@ jobs:
             
       - name: validate gradle wrapper
         uses: gradle/wrapper-validation-action@v1
-      - name: setup jdk ${{ matrix.java }}
+      - name: setup jdk Ubuntu-latest
         uses: actions/setup-java@v1
         with:
-          java-version: ${{ matrix.java }}
+          distribution: `temurin`
+          java-version: 17
           
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
       - name: build
         run: ./gradlew build --no-daemon
       - name: capture build artifacts
-        if: ${{ runner.os == 'Linux' && matrix.java == '17' }}
         uses: actions/upload-artifact@v2
         with:
           name: Artifacts

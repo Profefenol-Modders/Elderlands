@@ -1,6 +1,6 @@
 package io.github.profefenol.elderland;
 
-import io.github.profefenol.elderland.entities.BlobBossEntityRenderer;
+import io.github.profefenol.elderland.entities.GrapesterEntityRenderer;
 import io.github.profefenol.elderland.gui.StatsScreen;
 import io.github.profefenol.elderland.network.Packets;
 import net.fabricmc.api.ClientModInitializer;
@@ -41,9 +41,9 @@ public class ElderLandClient implements ClientModInitializer {
             }
         });
 
-        EntityRendererRegistry.INSTANCE.register(ElderLand.BLOB_BOSS, (context) -> {
-            log.info("Registering BLOB_BOSS renderer");
-            return new BlobBossEntityRenderer(context);
+        EntityRendererRegistry.INSTANCE.register(ElderLand.grapester, (context) -> {
+            log.info("Registering Grapester renderer");
+            return new GrapesterEntityRenderer(context);
         });
     }
 }

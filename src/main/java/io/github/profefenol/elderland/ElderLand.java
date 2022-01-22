@@ -2,7 +2,7 @@ package io.github.profefenol.elderland;
 
 import io.github.profefenol.elderland.blocks.UnstableElderium;
 import io.github.profefenol.elderland.corruption.Corruption;
-import io.github.profefenol.elderland.entities.BlobBossEntity;
+import io.github.profefenol.elderland.entities.GrapesterEntity;
 import io.github.profefenol.elderland.items.UnstableElderiumItem;
 import io.github.profefenol.elderland.items.UnstableShard;
 import io.github.profefenol.elderland.persistance.PlayerData;
@@ -45,10 +45,10 @@ public class ElderLand implements ModInitializer {
     private static final Map<UUID, Player> players = new HashMap<>();
     public static String MOD_ID = "elderland";
     //TODO move this somewhere else
-    public static final EntityType<BlobBossEntity> BLOB_BOSS =
+    public static final EntityType<GrapesterEntity> grapester =
             Registry.register(Registry.ENTITY_TYPE,
-                    new Identifier(ElderLand.MOD_ID, "elderium_blob_boss"),
-                    FabricEntityTypeBuilder.create(SpawnGroup.MISC, BlobBossEntity::new)
+                    new Identifier(ElderLand.MOD_ID, "grapester"),
+                    FabricEntityTypeBuilder.create(SpawnGroup.MISC, GrapesterEntity::new)
                             .dimensions(EntityDimensions.fixed(10f, 10f))
                             .build());
     private final Logger log = LoggerFactory.getLogger(getClass());
@@ -91,7 +91,7 @@ public class ElderLand implements ModInitializer {
         Registry.register(BLOCK, UnstableElderium.IDENTIFIER, UnstableElderium.INSTANCE);
         Registry.register(ITEM, UnstableElderiumItem.IDENTIFIER, UnstableElderiumItem.INSTANCE);
         Registry.register(ITEM, UnstableShard.IDENTIFIER, UnstableShard.INSTANCE);
-        FabricDefaultAttributeRegistry.register(BLOB_BOSS, BlobBossEntity.createMobAttributes());
+        FabricDefaultAttributeRegistry.register(grapester, GrapesterEntity.createMobAttributes());
     }
 
     private void onPlayerJoin(ServerPlayNetworkHandler handler, PacketSender sender, MinecraftServer server) {
