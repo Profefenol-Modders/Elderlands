@@ -1,10 +1,7 @@
 package io.github.profefenol.elderland;
 
-import io.github.profefenol.elderland.blocks.UnstableElderium;
 import io.github.profefenol.elderland.corruption.Corruption;
 import io.github.profefenol.elderland.entities.GrapesterEntity;
-import io.github.profefenol.elderland.items.UnstableElderiumItem;
-import io.github.profefenol.elderland.items.UnstableShard;
 import io.github.profefenol.elderland.persistance.PlayerData;
 import io.github.profefenol.elderland.persistance.PlayerDatabase;
 import io.github.profefenol.elderland.persistance.SaveRunner;
@@ -36,9 +33,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
-
-import static net.minecraft.util.registry.Registry.BLOCK;
-import static net.minecraft.util.registry.Registry.ITEM;
 
 public class ElderLand implements ModInitializer {
 
@@ -87,10 +81,6 @@ public class ElderLand implements ModInitializer {
 
         ResourceManagerHelper.get(ResourceType.SERVER_DATA).registerReloadListener(new RuntimeArmorGenerator());
         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new RuntimeArmorGenerator());
-
-        Registry.register(BLOCK, UnstableElderium.IDENTIFIER, UnstableElderium.INSTANCE);
-        Registry.register(ITEM, UnstableElderiumItem.IDENTIFIER, UnstableElderiumItem.INSTANCE);
-        Registry.register(ITEM, UnstableShard.IDENTIFIER, UnstableShard.INSTANCE);
         FabricDefaultAttributeRegistry.register(grapester, GrapesterEntity.createMobAttributes());
     }
 
