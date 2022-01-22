@@ -7,10 +7,10 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v2
-        
+
       - name: Tidy cache
         uses: skjolber/tidy-cache-github-action@v1
-        
+
       - name: cache
         uses: actions/cache@v2
         with:
@@ -20,15 +20,15 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
-            
+
       - name: validate gradle wrapper
         uses: gradle/wrapper-validation-action@v1
       - name: setup jdk Ubuntu-latest
         uses: actions/setup-java@v1
         with:
-          distribution: `temurin`
+          distribution: 'temurin'
           java-version: 17
-          
+
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
       - name: build
