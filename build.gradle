@@ -29,7 +29,6 @@ dependencies {
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
-	implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.4'
 }
 
 processResources {

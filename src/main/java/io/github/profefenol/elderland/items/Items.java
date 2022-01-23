@@ -13,13 +13,13 @@ import net.minecraft.world.World;
 
 public class Items implements ModInitializer {
     public static final Item UNSTABLE_SHARD = new Item(new FabricItemSettings().group(ItemGroup.MISC)) {
-        @Override
-        public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-            super.inventoryTick(stack, world, entity, slot, selected);
-            if (!world.isClient) {
-                ElderLand.getCorruptionFor(entity).ifPresent(corruption -> corruption.corruptedItemTick(10));
-            }
-        }
+//        @Override
+//        public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+//            super.inventoryTick(stack, world, entity, slot, selected);
+ //           if (!world.isClient) {
+//                ElderLand.getCorruptionFor(entity).ifPresent(corruption -> corruption.corruptedItemTick(10));
+//            }
+//        }
     };
     @Override
     public void onInitialize() {

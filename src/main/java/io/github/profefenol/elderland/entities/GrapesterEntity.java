@@ -11,7 +11,7 @@ public class GrapesterEntity extends HostileEntity {
     public GrapesterEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
         //TODO understand what lb what trying to do:
-//        this.visib
+//        this.visible
     }
 
     //TODO make this work later
