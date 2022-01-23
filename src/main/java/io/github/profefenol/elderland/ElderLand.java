@@ -5,19 +5,15 @@ import io.github.profefenol.elderland.entities.GrapesterEntity;
 import io.github.profefenol.elderland.persistance.PlayerData;
 import io.github.profefenol.elderland.persistance.PlayerDatabase;
 import io.github.profefenol.elderland.persistance.SaveRunner;
-import io.github.profefenol.elderland.runtime.RuntimeArmorGenerator;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
-import net.minecraft.resource.ResourceType;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.util.Identifier;
@@ -78,10 +74,6 @@ public class ElderLand implements ModInitializer {
 
         });
         ServerLifecycleEvents.SERVER_STOPPED.register(server -> saveRunner.stop());
-
-        ResourceManagerHelper.get(ResourceType.SERVER_DATA).registerReloadListener(new RuntimeArmorGenerator());
-        ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new RuntimeArmorGenerator());
-        FabricDefaultAttributeRegistry.register(grapester, GrapesterEntity.createMobAttributes());
     }
 
     private void onPlayerJoin(ServerPlayNetworkHandler handler, PacketSender sender, MinecraftServer server) {
