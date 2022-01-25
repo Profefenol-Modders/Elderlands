@@ -21,10 +21,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.profefenol.elderland.ElderLand"
+      "io.github.profefenol.elderlands.ElderLand"
     ],
     "client": [
-      "io.github.profefenol.elderland.ElderLandClient"
+      "io.github.profefenol.elderlands.ElderLandClient"
     ]
   },
   "mixins": [
@@ -35,7 +35,5 @@
     "fabricloader": "*",
     "fabric": "*",
     "minecraft": ">=1.18"
-  },
-  "suggests": {
   }
 }

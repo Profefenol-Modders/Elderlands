@@ -1,0 +1,10 @@
+{
+  "item.elderlands.unstable_elderium": "Unstable Elderium",
+  "item.elderlands.unstable_elderium_shard": "Unstable Elderium Shard",
+  "item.elderlands.elder_portal_frame": "Elder Portal Frame",
+
+  "text.elderlands.login": "[Login Complete]",
+
+  "gui.elderlands.exit_button": "Exit",
+  "gui.elderlands.stat_screen_title": "Exit"
+}
