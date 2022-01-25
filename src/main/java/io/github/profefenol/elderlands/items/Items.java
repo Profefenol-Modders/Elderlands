@@ -1,13 +1,12 @@
 package io.github.profefenol.elderlands.items;
 
 import io.github.profefenol.elderlands.gui.ModItemGroup;
-import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 
-public class Items implements ModInitializer {
+public class Items {
     public static final Item UNSTABLE_SHARD = new Item(new Item.Settings().group(ModItemGroup.ELDERLANDS_ITEMS)) {
 //        @Override
 //        public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
@@ -17,8 +16,10 @@ public class Items implements ModInitializer {
 //            }
 //        }
     };
-    @Override
-    public void onInitialize() {
+    public static void items() {
+        initializeItems();
+    }
+    public static void initializeItems() {
         Registry.register(Registry.ITEM, new Identifier("elderlands", "unstable_elderium_shard"), UNSTABLE_SHARD);
     }
 }

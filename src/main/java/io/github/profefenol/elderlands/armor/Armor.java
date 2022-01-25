@@ -61,7 +61,10 @@ public class Armor implements ArmorMaterial {
         public static final Item ELDERIUM_MATERIAL_LEGGINGS = new ArmorItem(ELDERIUM_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Settings().group(ModItemGroup.ELDERLANDS_ARMOR));
         public static final Item ELDERIUM_MATERIAL_BOOTS = new ArmorItem(ELDERIUM_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Settings().group(ModItemGroup.ELDERLANDS_ARMOR));
 
-        public static void register() {
+        public static void armor() {
+            initializeArmor();
+        }
+        public static void initializeArmor() {
             Registry.register(Registry.ITEM, new Identifier("elderlands", "elderium_helmet"), ELDERIUM_MATERIAL_HELMET);
             Registry.register(Registry.ITEM, new Identifier("elderlands", "elderium_chestplate"), ELDERIUM_MATERIAL_CHESTPLATE);
             Registry.register(Registry.ITEM, new Identifier("elderlands", "elderium_leggings"), ELDERIUM_MATERIAL_LEGGINGS);

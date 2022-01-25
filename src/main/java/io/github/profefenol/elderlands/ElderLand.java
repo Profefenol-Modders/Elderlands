@@ -1,6 +1,9 @@
 package io.github.profefenol.elderlands;
 
+import io.github.profefenol.elderlands.armor.Armor;
+import io.github.profefenol.elderlands.blocks.ModBlocks;
 import io.github.profefenol.elderlands.entities.GrapesterEntity;
+import io.github.profefenol.elderlands.items.Items;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
@@ -37,6 +40,8 @@ public class ElderLand implements ModInitializer {
 
     @Override
     public void onInitialize() {
-
+        ModBlocks.modBlocks();
+        Armor.RegisterItems.initializeArmor();
+        Items.initializeItems();
     }
 }
