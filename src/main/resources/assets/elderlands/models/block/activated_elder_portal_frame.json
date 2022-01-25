@@ -2,8 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "elderlands:block/activated_frame_texture",
-		"particle": "elderlands:block/activated_frame_texture"
+		"0": "elderlands:block/activated_frame_texture"
 	},
 	"elements": [
 		{

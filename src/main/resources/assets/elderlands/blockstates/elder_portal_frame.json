@@ -1,5 +1,6 @@
 {
   "variants": {
-    "": { "activated": "elderlands:block/elder_portal_frame" }
+    "": { "activated=true": "elderlands:block/activated_elder_portal_frame" },
+    "": { "activated-false": "elderlands:block/elder_portal_frame" },
   }
 }
