@@ -12,6 +12,6 @@ public class GrapesterEntityRenderer extends MobEntityRenderer<GrapesterEntity, 
 
     @Override
     public Identifier getTexture(GrapesterEntity entity) {
-        return new Identifier("assets/elderland/textures/entity/debug.png");
+        return new Identifier("assets/elderlands/textures/entity/debug.png");
     }
 }

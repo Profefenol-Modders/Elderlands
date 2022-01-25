@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "elderland",
+  "id": "elderlands",
   "version": "0.1",
 
   "name": "Elderlands",
@@ -16,7 +16,7 @@
   },
 
   "license": "LGPLv3",
-  "icon": "assets/elderland/icon.png",
+  "icon": "assets/elderlands/icon.png",
 
   "environment": "*",
   "entrypoints": {
@@ -28,7 +28,7 @@
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "elderlands.mixins.json"
   ],
 
   "depends": {

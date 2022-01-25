@@ -16,7 +16,7 @@ public class StatsScreen extends Screen {
     private static final Identifier STAT_SCREEN_BACKGROUND = new Identifier("elderlands", "textures/screen/stat_background.png");
 
     public StatsScreen() {
-        super(new TranslatableText("gui.elderland.stat_screen_title"));
+        super(new TranslatableText("gui.elderlands.stat_screen_title"));
     }
 
     @Override

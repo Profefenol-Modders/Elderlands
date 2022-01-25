@@ -42,7 +42,6 @@ public class Armor implements ArmorMaterial {
 
     @Override
     public String getName() {
-        // Must be all lowercase
         return "elderium";
     }
 

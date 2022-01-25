@@ -28,7 +28,7 @@ public class ElderLand implements ModInitializer {
 
     @NotNull
     private static synchronized File getModFolder(MinecraftServer server) {
-        final File folder = new File(server.getSavePath(WorldSavePath.ROOT).toFile(), "elderland");
+        final File folder = new File(server.getSavePath(WorldSavePath.ROOT).toFile(), "elderlands");
         if (!folder.exists()) {
             folder.mkdir();
         }
